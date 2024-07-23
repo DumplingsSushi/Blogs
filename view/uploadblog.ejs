@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new post</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }   
+        input, textarea{
+            background-color: bisque;
+        }
+        h2{
+            text-align: center;
+            margin-bottom:20px;
+        }
+        .form-container{
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: antiquewhite;
+            border: 1px solid;
+            border-radius: 12px;
+            text-align: center;
+        }
+        label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        input, textarea{
+            width: 100%;
+            padding: 8px;
+            font-size: 10px;
+            border: 1px solid;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+        button[type="submit"]{
+            display: block;
+            font-size: 15px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',;
+            width: 40%;
+            margin-left: 140px;
+            padding: 10px;
+            background-color: rgb(42, 90, 132);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover{
+            background-color: rgb(59, 183, 113);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create a new post</h2>
+        <form action="/posts" method="post" enctype="multipart/form-data">
+            <div class="from-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="from-group">
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" required></textarea>
+            </div>
+            <div class="from-group">
+                <label for="photo">Photo:</label>
+                <input type="file" id="photo" name="photo">
+            </div>
+            <button type="submit">Create post</button>
+        </form>
+    </div>
+</body>
+</html>
